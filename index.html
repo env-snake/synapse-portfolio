@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Snake — Level Design &amp; Environment Art</title>
-<meta name="description" content="Портфолио Snake: Level Design &amp; Environment Art на Source Engine.">
-<meta property="og:title" content="Snake — Level Design &amp; Environment Art">
-<meta property="og:description" content="Портфолио: карты на Source Engine — Manga Style, Sci-Fi, оптимизация, портирование, шейдеры.">
+<title>Snake — Level Design &amp; Environment Art Portfolio</title>
+<meta name="description" content="Snake portfolio: Level Design &amp; Environment Art on the Source Engine.">
+<meta property="og:title" content="Snake — Level Design &amp; Environment Art Portfolio">
+<meta property="og:description" content="Portfolio: Source Engine maps — Manga Style, Sci-Fi, optimization, porting, shaders.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://env-snake.github.io/shinri-portfolio/">
-<meta property="og:image" content="https://env-snake.github.io/shinri-portfolio/media/konoha/01.jpg">
+<meta property="og:url" content="https://env-snake.github.io/portfolio/">
+<meta property="og:image" content="https://env-snake.github.io/portfolio/media/konoha/01.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="media/favicon.png">
 <link rel="apple-touch-icon" href="media/apple-touch-icon.png">
@@ -38,7 +38,7 @@
   a { color: inherit; }
   img, video { display: block; max-width: 100%; }
 
-  /* ---------- Шапка ---------- */
+  /* ---------- Header ---------- */
   .topbar {
     position: fixed; inset: 0 0 auto 0; z-index: 20;
     display: flex; align-items: center; justify-content: space-between; gap: 16px;
@@ -79,7 +79,7 @@
     font-size: clamp(38px, 7vw, 84px); line-height: 1.02; margin: 0; letter-spacing: -.01em;
   }
 
-  /* ---------- Разделы ---------- */
+  /* ---------- Sections ---------- */
   main { padding: 0 var(--gutter); max-width: 1440px; margin: 0 auto; }
   .section { padding: clamp(56px, 9vw, 110px) 0 20px; }
   .section-head { display: grid; gap: 10px; margin-bottom: clamp(32px, 5vw, 56px); border-top: 1px solid var(--line); padding-top: 28px; }
@@ -172,7 +172,7 @@
     padding: 1px 8px; border-radius: 999px; white-space: nowrap;
   }
 
-  /* Вертикальная навигация */
+  /* Vertical navigation */
   .rail { display: none; }
   @media (min-width: 1100px) {
     main { padding-right: max(var(--gutter), calc(220px - max(0px, (100vw - 1440px) / 2))); }
@@ -240,7 +240,7 @@
 
   footer { border-top: 1px solid var(--line); margin-top: 40px; padding: 28px var(--gutter) 40px; color: var(--muted); font-size: 14px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
 
-  /* ---------- Лайтбокс ---------- */
+  /* ---------- Lightbox ---------- */
   .lb { position: fixed; inset: 0; z-index: 50; background: rgba(5,6,8,.96); display: none; align-items: center; justify-content: center; }
   .lb.open { display: flex; }
   .lb img { max-width: calc(100vw - 32px); max-height: calc(100svh - 110px); border-radius: 6px; box-shadow: 0 20px 60px rgba(0,0,0,.6); }
@@ -268,25 +268,25 @@
   <a class="brand" href="#top"><img src="media/avatar.png" alt=""><span>env<b>.</b>snake</span></a>
   <nav class="nav" id="nav"></nav>
 </header>
-<nav class="rail" id="rail" aria-label="Разделы портфолио"><div class="rail-track"><div class="rail-fill" id="rail-fill"></div></div><ol id="rail-list"></ol></nav>
+<nav class="rail" id="rail" aria-label="Portfolio sections"><div class="rail-track"><div class="rail-fill" id="rail-fill"></div></div><ol id="rail-list"></ol></nav>
 
 <section class="hero" id="top">
   <div class="hero-inner">
     <p class="eyebrow">Level Design &amp; Environment Art</p>
     <h1>Snake</h1>
-    <p class="hero-lead">В этом портфолио собрана часть моих последних достойных работ — то, что я делал и делаю на сегодняшний день. Некоторые из них ещё не&nbsp;завершены&nbsp;—&nbsp;W.I.P.</p>
+    <p class="hero-lead">This portfolio gathers a selection of my recent notable work — what I have built and am still building to this day. Some pieces are not finished yet&nbsp;—&nbsp;W.I.P.</p>
     <a class="hero-tg" href="https://t.me/env_snk" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg><span>@env_snk</span></a>
   </div>
 </section>
 
 <main id="content"></main>
-<noscript><p style="padding:24px 16px;max-width:720px;margin:0 auto">Для просмотра портфолио включите JavaScript. Связаться: <a href="https://t.me/env_snk">Telegram @env_snk</a> · Discord env_snake · <a href="https://www.youtube.com/@env_snake">YouTube</a> · <a href="mailto:env_snake@hotmail.com">env_snake@hotmail.com</a></p></noscript>
+<noscript><p style="padding:24px 16px;max-width:720px;margin:0 auto">Please enable JavaScript to view the portfolio. Get in touch: <a href="https://t.me/env_snk">Telegram @env_snk</a> · Discord env_snake · <a href="https://www.youtube.com/@env_snake">YouTube</a> · <a href="mailto:env_snake@hotmail.com">env_snake@hotmail.com</a></p></noscript>
 
 <section class="section contacts" id="contacts">
   <div class="section-head">
-    <span class="section-num">Связь</span>
-    <h2>Контакты</h2>
-    <p>Быстрее всего отвечаю в Telegram.</p>
+    <span class="section-num">Contact</span>
+    <h2>Contacts</h2>
+    <p>The fastest way to reach me is Telegram.</p>
   </div>
   <div class="contact-grid">
     <a class="contact preferred" href="https://t.me/env_snk" target="_blank" rel="noopener">
@@ -296,7 +296,7 @@
     <button class="contact" type="button" id="discord" data-copy="env_snake">
       <span class="c-label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z"/></svg>Discord</span>
       <span class="c-value">env_snake</span>
-      <span class="c-hint">Нажмите, чтобы скопировать</span>
+      <span class="c-hint">Click to copy</span>
     </button>
     <a class="contact" href="https://steamcommunity.com/id/env_snake/" target="_blank" rel="noopener">
       <span class="c-label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M11.979 0C5.678 0 .511 4.86.022 11.037l6.432 2.658c.545-.371 1.203-.59 1.912-.59.063 0 .125.004.188.006l2.861-4.142V8.91c0-2.495 2.028-4.524 4.524-4.524 2.494 0 4.524 2.031 4.524 4.527s-2.03 4.525-4.524 4.525h-.105l-4.076 2.911c0 .052.004.105.004.159 0 1.875-1.515 3.396-3.39 3.396-1.635 0-3.016-1.173-3.331-2.727L.436 15.27C1.862 20.307 6.486 24 11.979 24c6.627 0 11.999-5.373 11.999-12S18.605 0 11.979 0zM7.54 18.21l-1.473-.61c.262.543.714.999 1.314 1.25 1.297.539 2.793-.076 3.332-1.375.263-.63.264-1.319.005-1.949s-.75-1.121-1.377-1.383c-.624-.26-1.29-.249-1.878-.03l1.523.63c.956.4 1.409 1.5 1.009 2.455-.397.957-1.497 1.41-2.454 1.012H7.54zm11.415-9.303c0-1.662-1.353-3.015-3.015-3.015-1.665 0-3.015 1.353-3.015 3.015 0 1.665 1.35 3.015 3.015 3.015 1.663 0 3.015-1.35 3.015-3.015zm-5.273-.005c0-1.252 1.013-2.266 2.265-2.266 1.249 0 2.266 1.014 2.266 2.266 0 1.251-1.017 2.265-2.266 2.265-1.253 0-2.265-1.014-2.265-2.265z"/></svg>Steam</span>
@@ -312,11 +312,11 @@
     </a>
   </div>
   <div class="old-works">
-    <span class="c-label">Старые работы</span>
+    <span class="c-label">Earlier work</span>
     <div class="old-links">
       <a href="https://www.artstation.com/env_snake" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M0 17.723l2.027 3.505h.001a2.424 2.424 0 0 0 2.164 1.333h13.457l-2.792-4.838H0zm24 .025c0-.484-.143-.935-.388-1.314L15.728 2.728a2.424 2.424 0 0 0-2.142-1.289H9.419L21.598 22.54l1.92-3.325c.378-.637.482-.919.482-1.467zm-11.129-3.462L7.428 4.858l-5.444 9.428h10.887z"/></svg>ArtStation</a>
-      <a href="https://steamcommunity.com/workshop/filedetails/?id=2990379895" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M11.979 0C5.678 0 .511 4.86.022 11.037l6.432 2.658c.545-.371 1.203-.59 1.912-.59.063 0 .125.004.188.006l2.861-4.142V8.91c0-2.495 2.028-4.524 4.524-4.524 2.494 0 4.524 2.031 4.524 4.527s-2.03 4.525-4.524 4.525h-.105l-4.076 2.911c0 .052.004.105.004.159 0 1.875-1.515 3.396-3.39 3.396-1.635 0-3.016-1.173-3.331-2.727L.436 15.27C1.862 20.307 6.486 24 11.979 24c6.627 0 11.999-5.373 11.999-12S18.605 0 11.979 0zM7.54 18.21l-1.473-.61c.262.543.714.999 1.314 1.25 1.297.539 2.793-.076 3.332-1.375.263-.63.264-1.319.005-1.949s-.75-1.121-1.377-1.383c-.624-.26-1.29-.249-1.878-.03l1.523.63c.956.4 1.409 1.5 1.009 2.455-.397.957-1.497 1.41-2.454 1.012H7.54zm11.415-9.303c0-1.662-1.353-3.015-3.015-3.015-1.665 0-3.015 1.353-3.015 3.015 0 1.665 1.35 3.015 3.015 3.015 1.663 0 3.015-1.35 3.015-3.015zm-5.273-.005c0-1.252 1.013-2.266 2.265-2.266 1.249 0 2.266 1.014 2.266 2.266 0 1.251-1.017 2.265-2.266 2.265-1.253 0-2.265-1.014-2.265-2.265z"/></svg>Коллекция в Steam Workshop</a>
-      <a href="https://steamcommunity.com/id/env_snake/myworkshopfiles/" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M11.979 0C5.678 0 .511 4.86.022 11.037l6.432 2.658c.545-.371 1.203-.59 1.912-.59.063 0 .125.004.188.006l2.861-4.142V8.91c0-2.495 2.028-4.524 4.524-4.524 2.494 0 4.524 2.031 4.524 4.527s-2.03 4.525-4.524 4.525h-.105l-4.076 2.911c0 .052.004.105.004.159 0 1.875-1.515 3.396-3.39 3.396-1.635 0-3.016-1.173-3.331-2.727L.436 15.27C1.862 20.307 6.486 24 11.979 24c6.627 0 11.999-5.373 11.999-12S18.605 0 11.979 0zM7.54 18.21l-1.473-.61c.262.543.714.999 1.314 1.25 1.297.539 2.793-.076 3.332-1.375.263-.63.264-1.319.005-1.949s-.75-1.121-1.377-1.383c-.624-.26-1.29-.249-1.878-.03l1.523.63c.956.4 1.409 1.5 1.009 2.455-.397.957-1.497 1.41-2.454 1.012H7.54zm11.415-9.303c0-1.662-1.353-3.015-3.015-3.015-1.665 0-3.015 1.353-3.015 3.015 0 1.665 1.35 3.015 3.015 3.015 1.663 0 3.015-1.35 3.015-3.015zm-5.273-.005c0-1.252 1.013-2.266 2.265-2.266 1.249 0 2.266 1.014 2.266 2.266 0 1.251-1.017 2.265-2.266 2.265-1.253 0-2.265-1.014-2.265-2.265z"/></svg>Все работы в Workshop</a>
+      <a href="https://steamcommunity.com/workshop/filedetails/?id=2990379895" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M11.979 0C5.678 0 .511 4.86.022 11.037l6.432 2.658c.545-.371 1.203-.59 1.912-.59.063 0 .125.004.188.006l2.861-4.142V8.91c0-2.495 2.028-4.524 4.524-4.524 2.494 0 4.524 2.031 4.524 4.527s-2.03 4.525-4.524 4.525h-.105l-4.076 2.911c0 .052.004.105.004.159 0 1.875-1.515 3.396-3.39 3.396-1.635 0-3.016-1.173-3.331-2.727L.436 15.27C1.862 20.307 6.486 24 11.979 24c6.627 0 11.999-5.373 11.999-12S18.605 0 11.979 0zM7.54 18.21l-1.473-.61c.262.543.714.999 1.314 1.25 1.297.539 2.793-.076 3.332-1.375.263-.63.264-1.319.005-1.949s-.75-1.121-1.377-1.383c-.624-.26-1.29-.249-1.878-.03l1.523.63c.956.4 1.409 1.5 1.009 2.455-.397.957-1.497 1.41-2.454 1.012H7.54zm11.415-9.303c0-1.662-1.353-3.015-3.015-3.015-1.665 0-3.015 1.353-3.015 3.015 0 1.665 1.35 3.015 3.015 3.015 1.663 0 3.015-1.35 3.015-3.015zm-5.273-.005c0-1.252 1.013-2.266 2.265-2.266 1.249 0 2.266 1.014 2.266 2.266 0 1.251-1.017 2.265-2.266 2.265-1.253 0-2.265-1.014-2.265-2.265z"/></svg>Steam Workshop collection</a>
+      <a href="https://steamcommunity.com/id/env_snake/myworkshopfiles/" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M11.979 0C5.678 0 .511 4.86.022 11.037l6.432 2.658c.545-.371 1.203-.59 1.912-.59.063 0 .125.004.188.006l2.861-4.142V8.91c0-2.495 2.028-4.524 4.524-4.524 2.494 0 4.524 2.031 4.524 4.527s-2.03 4.525-4.524 4.525h-.105l-4.076 2.911c0 .052.004.105.004.159 0 1.875-1.515 3.396-3.39 3.396-1.635 0-3.016-1.173-3.331-2.727L.436 15.27C1.862 20.307 6.486 24 11.979 24c6.627 0 11.999-5.373 11.999-12S18.605 0 11.979 0zM7.54 18.21l-1.473-.61c.262.543.714.999 1.314 1.25 1.297.539 2.793-.076 3.332-1.375.263-.63.264-1.319.005-1.949s-.75-1.121-1.377-1.383c-.624-.26-1.29-.249-1.878-.03l1.523.63c.956.4 1.409 1.5 1.009 2.455-.397.957-1.497 1.41-2.454 1.012H7.54zm11.415-9.303c0-1.662-1.353-3.015-3.015-3.015-1.665 0-3.015 1.353-3.015 3.015 0 1.665 1.35 3.015 3.015 3.015 1.663 0 3.015-1.35 3.015-3.015zm-5.273-.005c0-1.252 1.013-2.266 2.265-2.266 1.249 0 2.266 1.014 2.266 2.266 0 1.251-1.017 2.265-2.266 2.265-1.253 0-2.265-1.014-2.265-2.265z"/></svg>All Workshop items</a>
     </div>
   </div>
 </section>
@@ -326,20 +326,20 @@
   <a href="https://t.me/env_snk" target="_blank" rel="noopener">Telegram: @env_snk</a>
 </footer>
 
-<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Просмотр изображения">
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Image viewer">
   <img id="lb-img" alt="">
-  <button class="lb-btn lb-close" id="lb-close" aria-label="Закрыть">✕</button>
-  <button class="lb-btn lb-prev" id="lb-prev" aria-label="Предыдущее">‹</button>
-  <button class="lb-btn lb-next" id="lb-next" aria-label="Следующее">›</button>
+  <button class="lb-btn lb-close" id="lb-close" aria-label="Close">✕</button>
+  <button class="lb-btn lb-prev" id="lb-prev" aria-label="Previous">‹</button>
+  <button class="lb-btn lb-next" id="lb-next" aria-label="Next">›</button>
   <div class="lb-count" id="lb-count"></div>
 </div>
 
 <script>
 /*
-  Контент портфолио. Чтобы добавить работы:
-  - картинки кладутся в media/<slug>/NN.jpg и media/<slug>/thumb/NN.jpg
-  - видео в media/video/<name>.mp4 (+ постер <name>.jpg)
-  - раздел без проектов на сайте не показывается
+  Portfolio content. To add work:
+  - images go to media/<slug>/NN.jpg and media/<slug>/thumb/NN.jpg
+  - videos in media/video/<name>.mp4 (+ poster <name>.jpg)
+  - a section without projects is not shown on the site
 */
 const SECTIONS = [
   {
@@ -348,12 +348,12 @@ const SECTIONS = [
     about: "",
     groups: [
       {
-        title: "Пайплайн",
+        title: "Pipeline",
         projects: [
           {
-            slug: "pipeline", title: "Пайплайн работы над локацией", year: "2025", count: 4, steps: true,
-            captions: ["Референсы", "Грейбокс", "Настройка лайтинга, добавление деталей", "Финал"],
-            desc: "Путь одной локации, созданной в 2025 году, от подборки референсов и грейбокса до финального вида с освещением и постобработкой.",
+            slug: "pipeline", title: "Environment pipeline", year: "2025", count: 4, steps: true,
+            captions: ["References", "Graybox", "Lighting setup, detailing", "Final"],
+            desc: "The journey of one location built in 2025, from reference gathering and grayboxing to the final look with lighting and post-processing.",
             tags: ["References", "Graybox", "Detailing", "Lighting"],
             videos: []
           }
@@ -364,43 +364,43 @@ const SECTIONS = [
         projects: [
           {
             slug: "greenforest", title: "Green Forest", year: "2026", count: 17,
-            desc: "Стилизованная локация на кастомных ассетах — созданных с нуля и портированных. На локации работают мой собственный <a href='#shader-grass'>вертексный шейдер травы</a> и <a href='#shader-sky'>стилизованный шейдер неба</a>.",
+            desc: "A stylized location built on custom assets — both created from scratch and ported. It runs my own <a href='#shader-grass'>grass vertex shader</a> and <a href='#shader-sky'>stylized sky shader</a>.",
             tags: ["Exterior", "Foliage", "Lighting"],
-            videos: [{ src: "greenforest", label: "Пролёт по карте" }]
+            videos: [{ src: "greenforest", label: "Flythrough" }]
           },
           {
             slug: "ancientforest", title: "Ancient Forest", year: "2026", count: 20,
-            desc: "Ночной стилизованный лес на тех же ассетах, что и дневной, но с другим <code>$skin</code>. Локация сделана до появления кастомных шейдеров, поэтому на демонстрации они не используются.",
+            desc: "A night-time stylized forest on the same assets as the daytime one, but with a different <code>$skin</code>. The location was built before the custom shaders existed, so they are not used in the demo.",
             tags: ["Exterior", "Foliage", "Lighting"],
-            videos: [{ src: "forest-map", label: "Пролёт по карте" }, { src: "forest-dev", label: "Пролёт по карте" }]
+            videos: [{ src: "forest-map", label: "Flythrough" }, { src: "forest-dev", label: "Flythrough" }]
           },
           {
-            slug: "konoha", title: "Konoha", year: "с 2025", count: 30,
-            desc: "Масштабная деревня по тематике «Наруто» — деревня скрытого листа Коноха. Работа включает комплексные сооружения с интерьерами и открытые территории для PvP. Все ассеты кастомные: половина портирована прямиком из <a class='ext' href='https://www.fab.com/' target='_blank' rel='noopener'><img src='media/fab.png' alt=''>Fab</a>, другая половина создана с нуля. На фото и видео показана лишь малая часть проекта. Несмотря на большой объём проделанной работы, на сегодняшний день она всё ещё <span class='wip'>W.I.P.</span>",
+            slug: "konoha", title: "Konoha", year: "since 2025", count: 30,
+            desc: "A large-scale Naruto-themed village — the Hidden Leaf Village, Konoha. The work includes complex buildings with interiors and open areas for PvP. All assets are custom: half were ported straight from <a class='ext' href='https://www.fab.com/' target='_blank' rel='noopener'><img src='media/fab.png' alt=''>Fab</a>, the other half were made from scratch. The photos and videos show only a small part of the project. Despite the amount of work done, it is still <span class='wip'>W.I.P.</span>",
             tags: ["Exterior", "Interior", "Lighting"],
-            videos: [{ src: "konoha", label: "Пролёт по карте" }]
+            videos: [{ src: "konoha", label: "Flythrough" }]
           },
           {
             slug: "senju", title: "Senju", year: "2026", count: 24,
-            desc: "Резиденция клана — часть деревни скрытого листа. Включает разные виды модульных комнат, все ассеты кастомные.",
+            desc: "A clan residence — part of the Hidden Leaf Village. It includes several types of modular rooms; all assets are custom.",
             tags: ["Interior", "Lighting"],
-            videos: [{ src: "senju-1", label: "Пролёт по локации" }, { src: "senju-2", label: "Прогулка по локации" }]
+            videos: [{ src: "senju-1", label: "Flythrough" }, { src: "senju-2", label: "Walkthrough" }]
           },
           {
             slug: "uchiwa", title: "Uchiwa", year: "2026", count: 21,
-            desc: "Резиденция клана в деревне скрытого листа. Как и резиденция Senju, включает кластеры разных комнат.",
+            desc: "A clan residence in the Hidden Leaf Village. Like the Senju residence, it features clusters of different rooms.",
             tags: ["Interior", "Lighting"],
-            videos: [{ src: "uchiwa", label: "Пролёт по локации" }]
+            videos: [{ src: "uchiwa", label: "Flythrough" }]
           },
           {
             slug: "hospital", title: "Hospital", year: "2026", count: 9,
-            desc: "Больница Конохи: регистратура, коридоры, кабинеты, палаты и операционные. Сцена освещена с помощью кастомного шейдера <code>static_projected_light</code>, который позволяет добавлять детализированные источники света.",
+            desc: "The Konoha hospital: reception, corridors, offices, wards and operating rooms. The scene is lit with the custom <code>static_projected_light</code> shader, which allows adding detailed light sources.",
             tags: ["Interior", "Lighting"],
             videos: []
           },
           {
             slug: "yard", title: "Yard", year: "2026", count: 5,
-            desc: "Двор у полицейского участка в деревне скрытого листа. Скриншоты сделаны пару месяцев назад, поэтому качество картинки заметно хуже, чем у резиденций и других сооружений Конохи.",
+            desc: "A courtyard by the police station in the Hidden Leaf Village. The screenshots were taken a couple of months ago, so the image quality is noticeably worse than that of the residences and other Konoha buildings.",
             tags: ["Exterior", "Lighting"],
             videos: []
           }
@@ -411,134 +411,134 @@ const SECTIONS = [
         projects: [
           {
             slug: "combine", title: "Combine Sector", year: "2026", count: 21,
-            desc: "Сектор Альянса для RP-сервера по тематике HL2, сделан пару месяцев назад. Большинство ассетов я лично <a href='#port-alyx'>портировал</a> из <a href='https://store.steampowered.com/app/546560/HalfLife_Alyx/' target='_blank' rel='noopener'>Half-Life: Alyx</a> с поддержкой LOD-систем. Для освещения используется шейдер <code>static_projected_light</code>.",
+            desc: "A Combine sector for an HL2-themed RP server, built a couple of months ago. I personally <a href='#port-alyx'>ported</a> most of the assets from <a href='https://store.steampowered.com/app/546560/HalfLife_Alyx/' target='_blank' rel='noopener'>Half-Life: Alyx</a> with LOD system support. Lighting uses the <code>static_projected_light</code> shader.",
             tags: ["Interior", "Lighting", "Sci-Fi"],
             videos: [
               { src: "combine-cinematic", label: "Cinematic" },
-              { src: "combine-corridor", label: "Перекрёстный коридор" },
-              { src: "combine-hall", label: "Главный коридор" }
+              { src: "combine-corridor", label: "Cross corridor" },
+              { src: "combine-hall", label: "Main corridor" }
             ]
           },
           {
             slug: "underwater", title: "Underwater Facility", year: "2024–2026", count: 15,
-            desc: "Подводный комплекс, созданный мной для SCP-RP сервера. На карте есть кастомные ассеты, но большая часть работы сделана брашами с последующим переводом в модели.",
+            desc: "An underwater complex I built for an SCP-RP server. The map has custom assets, but most of the work was done with brushes and then converted into models.",
             tags: ["Interior", "Lighting", "Sci-Fi"],
-            videos: [{ src: "underwater", label: "Пролёт по локации" }]
+            videos: [{ src: "underwater", label: "Flythrough" }]
           },
           {
             slug: "horror", title: "Horror Underwater Facility", year: "2026", count: 14,
-            parts: [{ label: "Морское дно", from: 1, to: 10 }, { label: "Технические отсеки", from: 11, to: 14 }],
-            desc: "Новая версия морского дна и общий стиль для новой карты подводной станции. Карта работает с кластерами кастомных шейдеров, которые я сделал специально для этих локаций. Сцена собрана из ассетов игры <a href='https://store.steampowered.com/app/282140/SOMA/' target='_blank' rel='noopener'>SOMA</a>, портированных <a href='#port-soma'>автоматическим конвейером</a>, который я написал сам.",
+            parts: [{ label: "Sea floor", from: 1, to: 10 }, { label: "Technical sections", from: 11, to: 14 }],
+            desc: "A new version of the sea floor and the overall look for a new underwater station map. The map uses clusters of custom shaders I made specifically for these locations. The scene is assembled from <a href='https://store.steampowered.com/app/282140/SOMA/' target='_blank' rel='noopener'>SOMA</a> assets, ported by an <a href='#port-soma'>automated pipeline</a> I wrote myself.",
             extra: {
-              title: "Кастомные underwater-шейдеры",
+              title: "Custom underwater shaders",
               items: ["Volumetric Fog", "Depth Reconstruction", "Height / Depth Darkening", "Volumetric Lighting (unshadowed)",
                       "Caustics", "Fog Noise", "Fog-to-Sky Blending", "DDOF", "HDR Bloom", "Film Grain", "Chromatic Aberration",
                       "Lens Flares", "Radial Blur", "Video Distortion", "Image Trail", "Marine Snow", "Procedural Sky"]
             },
             tags: ["Exterior", "Interior", "Horror"],
-            videos: [{ src: "horror-underwater", label: "Пролёт по локации" }]
+            videos: [{ src: "horror-underwater", label: "Flythrough" }]
           }
         ]
       }
     ]
   },
   {
-    id: "optimization", nav: "Оптимизация",
-    title: "Оптимизация уровней",
-    about: "Здесь показаны методы оптимизации, нестандартные для большинства мапперов: LOD-системы, разбиение пространства hint-брашами и анимированные $detail-текстуры вместо дублирования геометрии.",
+    id: "optimization", nav: "Optimization",
+    title: "Level optimization",
+    about: "Optimization techniques that are uncommon among mappers: LOD systems, spatial subdivision with hint brushes, and animated $detail textures instead of duplicated geometry.",
     groups: [{
       projects: [
         {
-          slug: "hint", title: "Hint-браши", count: 1, wide: true,
-          desc: "Разбиение пространства hint-брашами на перекрёстке коридоров.",
+          slug: "hint", title: "Hint brushes", count: 1, wide: true,
+          desc: "Subdividing space with hint brushes at a corridor intersection.",
           tags: ["Hint", "Visleaf", "Hammer"],
           videos: []
         },
         {
-          slug: "lod", title: "LOD-системы", count: 2, wide: true,
-          desc: "Сравнение уровней детализации r_lod 0 / 1 / 2 на моделях и пропах.",
+          slug: "lod", title: "LOD systems", count: 2, wide: true,
+          desc: "Comparison of detail levels r_lod 0 / 1 / 2 on models and props.",
           tags: ["LOD", "Blender"],
           videos: []
         },
         {
-          slug: "opt-detail", title: "$detail-текстура", count: 0,
-          desc: "Анимированная каустика на дне сделана через <code>$detail</code>-текстуру в материале, а не дублированием геометрии с отдельной текстурой: тот же визуальный результат без лишних полигонов и дополнительной отрисовки.",
+          slug: "opt-detail", title: "$detail texture", count: 0,
+          desc: "Animated caustics on the floor are done with a <code>$detail</code> texture in the material rather than by duplicating geometry with a separate texture: the same visual result without extra polygons or draw calls.",
           tags: ["$detail", "Materials", "VMT"],
-          videos: [{ src: "opt-detail", label: "Анимированная $detail-текстура" }]
+          videos: [{ src: "opt-detail", label: "Animated $detail texture" }]
         }
       ]
     }]
   },
   {
-    id: "porting", nav: "Портирование",
-    title: "Портирование ассетов",
-    about: "Перенос окружения из других игр в Source Engine: автоматический пайплайн и ручной порт.",
+    id: "porting", nav: "Porting",
+    title: "Asset porting",
+    about: "Bringing environments from other games into the Source Engine: an automated pipeline and manual porting.",
     groups: [{
       projects: [
         {
-          slug: "port-soma", title: "SOMA — автоматическое портирование ассетов в игру", count: 0,
-          desc: "Окружение SOMA, перенесённое в Source Engine автоматическим пайплайном.",
+          slug: "port-soma", title: "SOMA — automated asset porting", count: 0,
+          desc: "SOMA environments ported into the Source Engine by an automated pipeline.",
           tags: ["Automation", "Pipeline"],
-          videos: [{ src: "port-soma", label: "Автоматический порт" }]
+          videos: [{ src: "port-soma", label: "Automated port" }]
         },
         {
-          slug: "port-manga", title: "Manga Style окружение — портирование ассетов в игру", count: 5,
-          desc: "Ручной порт стилизованных деревьев, растительности и пропов через Blender.",
+          slug: "port-manga", title: "Manga Style environment — asset porting", count: 5,
+          desc: "A manual port of stylized trees, vegetation and props through Blender.",
           tags: ["Blender", "Foliage"],
-          videos: [{ src: "port-manga", label: "Деревья из UE5, исходники" }]
+          videos: [{ src: "port-manga", label: "Trees from UE5, source files" }]
         },
         {
-          slug: "port-alyx", title: "Half-Life: Alyx — портирование ассетов в игру", count: 10,
-          desc: "Ручной порт моделей и окружения Half-Life: Alyx в Source Engine.",
+          slug: "port-alyx", title: "Half-Life: Alyx — asset porting", count: 10,
+          desc: "A manual port of Half-Life: Alyx models and environments into the Source Engine.",
           tags: ["Models", "Materials", "Hammer"],
-          videos: [{ src: "alyx-lods", label: "LOD и порт анимаций" }, { src: "alyx-antlions", label: "Портирование анимированных муравьиных львов" }]
+          videos: [{ src: "alyx-lods", label: "LOD and animation porting" }, { src: "alyx-antlions", label: "Porting animated antlions" }]
         }
       ]
     }]
   },
   {
-    id: "tools", nav: "Утилиты",
-    title: "Кастомные утилиты",
-    about: "Шейдеры для карт и игровая логика уровней.",
+    id: "tools", nav: "Tools",
+    title: "Custom tools",
+    about: "Map shaders and level game logic.",
     groups: [
       {
-        title: "Шейдеры",
+        title: "Shaders",
         projects: [
           {
-            slug: "shader-grass", title: "Вертексный шейдер для травы", count: 3,
-            desc: "Кастомный вертексный шейдер для травы.",
+            slug: "shader-grass", title: "Grass vertex shader", count: 3,
+            desc: "A custom grass vertex shader.",
             tags: ["Shader", "Foliage"],
-            videos: [{ src: "shader-grass-1", label: "Демонстрация Soft LOD и вида травы" }, { src: "shader-grass-2", label: "Поведение травы после приземления игрока" }]
+            videos: [{ src: "shader-grass-1", label: "Demo of Soft LOD and grass look" }, { src: "shader-grass-2", label: "Grass response after the player lands" }]
           },
           {
-            slug: "shader-water", title: "Шейдер водной поверхности", count: 0,
-            desc: "Кастомный шейдер водной поверхности.",
+            slug: "shader-water", title: "Water surface shader", count: 0,
+            desc: "A custom water surface shader.",
             tags: ["Shader", "Water"],
-            videos: [{ src: "shader-water", label: "Демонстрация" }]
+            videos: [{ src: "shader-water", label: "Demo" }]
           },
           {
-            slug: "shader-sky", title: "Шейдер Manga Sky", count: 0,
-            desc: "Кастомный шейдер неба в стилистике аниме.",
+            slug: "shader-sky", title: "Manga Sky shader", count: 0,
+            desc: "A custom anime-styled sky shader.",
             tags: ["Shader", "Manga Style"],
-            videos: [{ src: "shader-sky", label: "Демонстрация" }]
+            videos: [{ src: "shader-sky", label: "Demo" }]
           }
         ]
       },
       {
-        title: "Логика уровня",
+        title: "Level logic",
         projects: [
           {
-            slug: "logic", title: "Логика уровня", count: 0,
-            desc: "Триггеры, скриптовые сценарии и интерактивные события на картах.",
+            slug: "logic", title: "Level logic", count: 0,
+            desc: "Triggers, scripted sequences and interactive events on maps.",
             tags: ["Entities", "Triggers", "Scripted Events"],
             videos: [
-              { src: "logic-reactor", label: "Взрыв реактора с логикой затопления, партиклами и звуковым сопровождением", year: 2024 },
-              { src: "logic-sluice", label: "Водный шлюз с логикой телепорта, партиклами и звуковым сопровождением", year: 2025 },
-              { src: "logic-antlion", label: "Концепт побега муравьиного льва", year: 2026 },
-              { src: "logic-antlion-2", label: "Концепт побега муравьиного льва, часть 2", year: 2026 },
-              { src: "logic-ks", label: "Логика камеры содержания SCP-106", year: 2024 },
-              { src: "logic-scp106", label: "Измерение SCP-106", year: 2024 },
-              { src: "logic-barricades", label: "Выдвижные баррикады и тесла-ворота" }
+              { src: "logic-reactor", label: "Reactor explosion with flooding logic, particles and sound", year: 2024 },
+              { src: "logic-sluice", label: "Water sluice with teleport logic, particles and sound", year: 2025 },
+              { src: "logic-antlion", label: "Antlion escape concept", year: 2026 },
+              { src: "logic-antlion-2", label: "Antlion escape concept, part 2", year: 2026 },
+              { src: "logic-ks", label: "SCP-106 containment chamber logic", year: 2024 },
+              { src: "logic-scp106", label: "SCP-106 dimension", year: 2024 },
+              { src: "logic-barricades", label: "Retractable barricades and tesla gates" }
             ]
           }
         ]
@@ -565,8 +565,8 @@ function renderProject(p) {
       <figcaption><span>${esc(v.label)}</span><span>${v.year ? v.year : (v.label.toLowerCase().includes(p.title.toLowerCase()) ? "" : esc(p.title))}</span></figcaption>
     </figure>`).join("");
   const thumb = i => `
-    <button type="button" data-i="${i}" aria-label="${esc(p.title)}, скриншот ${i + 1}">
-      <img loading="lazy" decoding="async" src="media/${p.slug}/thumb/${pad(i + 1)}.jpg" alt="${esc(p.title)}, скриншот ${i + 1}">
+    <button type="button" data-i="${i}" aria-label="${esc(p.title)}, screenshot ${i + 1}">
+      <img loading="lazy" decoding="async" src="media/${p.slug}/thumb/${pad(i + 1)}.jpg" alt="${esc(p.title)}, screenshot ${i + 1}">
       ${p.captions ? `<span class="cap"><b>${pad(i + 1)}</b>${esc(p.captions[i])}</span>` : ""}
     </button>`;
   const parts = p.parts || (p.count ? [{ from: 1, to: p.count }] : []);
@@ -577,7 +577,7 @@ function renderProject(p) {
     return `
       ${part.label ? `<p class="part-label">${esc(part.label)}</p>` : ""}
       <div class="gallery${p.wide ? " wide" : ""}${p.steps ? " steps" : ""}${collapsible ? " collapsed" : ""}">${imgs}</div>
-      ${collapsible ? `<button class="show-all" type="button">Показать все скриншоты (${n})</button>` : ""}`;
+      ${collapsible ? `<button class="show-all" type="button">Show all screenshots (${n})</button>` : ""}`;
   }).join("");
   const head = `
     <div class="project-head"><h3>${esc(p.title)}${p.year ? `<span class="year">${esc(p.year)}</span>` : ""}</h3><div class="tags">${p.tags.map(t => `<span class="tag">${esc(t)}</span>`).join("")}</div></div>
@@ -633,29 +633,29 @@ visible.forEach((s, si) => {
       </ol>
     </li>`);
 });
-nav.insertAdjacentHTML("beforeend", `<a class="nav-cta" href="#contacts"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M4 5h16v11H9l-5 4z"/></svg>Контакты</a>`);
+nav.insertAdjacentHTML("beforeend", `<a class="nav-cta" href="#contacts"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M4 5h16v11H9l-5 4z"/></svg>Contacts</a>`);
 content.appendChild(document.getElementById("contacts"));
 
-/* Ленивые постеры видео */
+/* Lazy video posters */
 const posterIO = new IntersectionObserver(entries => entries.forEach(e => {
   if (e.isIntersecting) { e.target.poster = e.target.dataset.poster; posterIO.unobserve(e.target); }
 }), { rootMargin: "600px 0px" });
 document.querySelectorAll("video[data-poster]").forEach(v => posterIO.observe(v));
 
-/* Discord: копирование ника */
+/* Discord: copy nickname */
 const dc = document.getElementById("discord");
 dc.addEventListener("click", () => {
   const hint = dc.querySelector(".c-hint");
-  const done = () => { hint.textContent = "Скопировано ✓"; setTimeout(() => { hint.textContent = "Нажмите, чтобы скопировать"; }, 1600); };
+  const done = () => { hint.textContent = "Copied ✓"; setTimeout(() => { hint.textContent = "Click to copy"; }, 1600); };
   if (navigator.clipboard) navigator.clipboard.writeText(dc.dataset.copy).then(done, () => {});
 });
 
-/* Только одно видео играет одновременно */
+/* Only one video plays at a time */
 document.addEventListener("play", e => {
   document.querySelectorAll("video").forEach(v => { if (v !== e.target) v.pause(); });
 }, true);
 
-/* Шапка становится плотной после hero */
+/* Header becomes solid after the hero */
 const topbar = document.getElementById("topbar");
 const railLinks = [...document.querySelectorAll("#rail-list a")];
 const railTargets = railLinks.map(a => document.getElementById(a.dataset.target));
@@ -666,7 +666,7 @@ function updateRail() {
   const line = window.innerHeight * 0.35;
   let active = -1;
   railTargets.forEach((t, i) => { if (t && t.getBoundingClientRect().top <= line) active = i; });
-  // если секция и её первая подгруппа уже прошли линию, подсвечиваем самый глубокий элемент
+  // if the section and its first subgroup are past the line, highlight the deepest item
   railLinks.forEach((a, i) => a.classList.toggle("active", i === active));
   const activeSec = active >= 0 ? railLinks[active].closest(".rail-sec") : null;
   document.querySelectorAll(".rail-sec").forEach(li => li.classList.toggle("open", li === activeSec));
@@ -679,12 +679,12 @@ const onScroll = () => {
 };
 window.addEventListener("scroll", onScroll, { passive: true }); onScroll();
 
-/* Лайтбокс */
+/* Lightbox */
 const lb = document.getElementById("lb"), lbImg = document.getElementById("lb-img"), lbCount = document.getElementById("lb-count");
 let cur = null, idx = 0;
 function show() {
   lbImg.src = `media/${cur.slug}/${pad(idx + 1)}.jpg`;
-  lbImg.alt = `${cur.title}, скриншот ${idx + 1}`;
+  lbImg.alt = `${cur.title}, screenshot ${idx + 1}`;
   lbCount.textContent = `${cur.title} · ${idx + 1} / ${cur.count}`;
   [idx - 1, idx + 1].forEach(j => { if (j >= 0 && j < cur.count) new Image().src = `media/${cur.slug}/${pad(j + 1)}.jpg`; });
 }
