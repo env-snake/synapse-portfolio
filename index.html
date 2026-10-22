@@ -437,7 +437,7 @@ const SECTIONS = [
             slug: "senju", title: "Senju", year: "2026", count: 24,
             desc: "A clan residence — part of the Hidden Leaf Village. It includes several types of modular rooms; all assets are custom.",
             tags: ["Interior", "Lighting"],
-            videos: [{ src: "senju-1", label: "Flythrough" }, { src: "senju-2", label: "Walkthrough" }]
+            videos: [{ src: "senju-1", label: "Flythrough" }]
           },
           {
             slug: "uchiwa", title: "Uchiwa", year: "2026", count: 21,
@@ -496,9 +496,14 @@ const SECTIONS = [
       projects: [
         {
           slug: "port-alyx", title: "Half-Life: Alyx — asset porting", count: 10,
-          desc: "A manual port of Half-Life: Alyx models and environments into the Source Engine.",
+          desc: "Manual and automated porting of Half-Life: Alyx models, props and environments into the Source Engine.",
           tags: ["Models", "Materials"],
-          videos: [{ src: "alyx-lods", label: "LOD and animation porting" }, { src: "alyx-antlions", label: "Porting animated antlions" }]
+          videos: [
+            { src: "alyx-pipeline", label: "Automated pipeline for porting assets from HLA" },
+            { src: "alyx-bones", label: "Fixed bone port for HLA content imported into GMod" },
+            { src: "alyx-lods", label: "LOD and animation porting" },
+            { src: "alyx-antlions", label: "Porting animated antlions" }
+          ]
         },
         {
           slug: "port-soma", title: "SOMA — automated asset porting", count: 0,
