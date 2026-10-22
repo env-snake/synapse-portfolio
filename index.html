@@ -128,17 +128,28 @@
 
   .ico { width: 16px; height: 16px; flex: none; }
   .c-label .ico { width: 18px; height: 18px; color: var(--text); }
-  .contact.preferred .c-label .ico { color: #29a9eb; }
+  .contact.preferred .c-label .ico { color: #5865f2; }
   .contact[href*="youtube"] .c-label .ico { color: #ff3b3b; }
   .old-links a { display: inline-flex; align-items: center; gap: 8px; }
   .hero-lead { font-size: clamp(16px, 1.5vw, 18px); color: #d6d3cd; max-width: 620px; margin: 18px 0 22px; }
-  .hero-tg {
-    display: inline-flex; align-items: center; gap: 10px; text-decoration: none; font-weight: 700; font-size: 15px;
-    padding: 10px 18px; border-radius: 999px; background: rgba(41,169,235,.14); border: 1px solid rgba(41,169,235,.5);
-    transition: background .2s;
+  .hero-cta { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 18px; }
+  .hero-dc {
+    display: inline-flex; align-items: center; gap: 10px; font: 700 15px "Manrope", sans-serif; color: var(--text);
+    padding: 10px 16px; border-radius: 999px; background: rgba(88,101,242,.16); border: 1px solid rgba(88,101,242,.55);
+    cursor: pointer; transition: background .2s;
   }
-  .hero-tg:hover { background: rgba(41,169,235,.26); }
-  .hero-tg .ico { width: 20px; height: 20px; color: #29a9eb; }
+  .hero-dc:hover { background: rgba(88,101,242,.3); }
+  .hero-dc .ico { width: 20px; height: 20px; color: #8b95f6; }
+  .hero-dc em {
+    font-style: normal; font-size: 11px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase;
+    color: #0b0f14; background: #8b95f6; padding: 2px 8px; border-radius: 999px; white-space: nowrap;
+  }
+  .hero-alt {
+    display: inline-flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 600;
+    color: var(--muted); text-decoration: none; transition: color .2s;
+  }
+  .hero-alt:hover { color: var(--text); }
+  .hero-alt .ico { width: 16px; height: 16px; color: #29a9eb; }
   .extra { margin: -8px 0 22px; }
   .extra summary {
     cursor: pointer; list-style: none; display: inline-flex; align-items: center; gap: 8px;
@@ -239,6 +250,9 @@
   .old-links a:hover { border-color: var(--accent); }
 
   footer { border-top: 1px solid var(--line); margin-top: 40px; padding: 28px var(--gutter) 40px; color: var(--muted); font-size: 14px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+  .foot-links { display: inline-flex; align-items: center; gap: 7px; flex-wrap: wrap; }
+  .foot-copy { all: unset; cursor: pointer; transition: color .2s; }
+  .foot-copy:hover, .foot-copy.copied { color: var(--accent); }
 
   /* ---------- Lightbox ---------- */
   .lb { position: fixed; inset: 0; z-index: 50; background: rgba(5,6,8,.96); display: none; align-items: center; justify-content: center; }
@@ -275,29 +289,34 @@
     <p class="eyebrow">Level Design &amp; Environment Art</p>
     <h1>Snake</h1>
     <p class="hero-lead">This portfolio gathers a selection of my recent notable work — what I have built and am still building to this day. Some pieces are not finished yet&nbsp;—&nbsp;W.I.P.</p>
-    <a class="hero-tg" href="https://t.me/env_snk" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg><span>@env_snk</span></a>
+    <div class="hero-cta">
+      <button class="hero-dc" type="button" data-copy="env_snake" aria-label="Copy Discord username">
+        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z"/></svg><span>env_snake</span><em>Preferred</em>
+      </button>
+      <a class="hero-alt" href="https://t.me/env_snk" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>Telegram @env_snk</a>
+    </div>
   </div>
 </section>
 
 <main id="content"></main>
-<noscript><p style="padding:24px 16px;max-width:720px;margin:0 auto">Please enable JavaScript to view the portfolio. Get in touch: <a href="https://t.me/env_snk">Telegram @env_snk</a> · Discord env_snake · <a href="https://www.youtube.com/@env_snake">YouTube</a> · <a href="mailto:env_snake@hotmail.com">env_snake@hotmail.com</a></p></noscript>
+<noscript><p style="padding:24px 16px;max-width:720px;margin:0 auto">Please enable JavaScript to view the portfolio. Get in touch: Discord env_snake · <a href="https://t.me/env_snk">Telegram @env_snk</a> · <a href="https://www.youtube.com/@env_snake">YouTube</a> · <a href="mailto:env_snake@hotmail.com">env_snake@hotmail.com</a></p></noscript>
 
 <section class="section contacts" id="contacts">
   <div class="section-head">
     <span class="section-num">Contact</span>
     <h2>Contacts</h2>
-    <p>The fastest way to reach me is Telegram.</p>
+    <p>The fastest way to reach me is Discord.</p>
   </div>
   <div class="contact-grid">
-    <a class="contact preferred" href="https://t.me/env_snk" target="_blank" rel="noopener">
-      <span class="c-label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>Telegram <em>Preferred</em></span>
-      <span class="c-value">@env_snk</span>
-    </a>
-    <button class="contact" type="button" id="discord" data-copy="env_snake">
-      <span class="c-label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z"/></svg>Discord</span>
+    <button class="contact preferred" type="button" data-copy="env_snake">
+      <span class="c-label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z"/></svg>Discord <em>Preferred</em></span>
       <span class="c-value">env_snake</span>
       <span class="c-hint">Click to copy</span>
     </button>
+    <a class="contact" href="https://t.me/env_snk" target="_blank" rel="noopener">
+      <span class="c-label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>Telegram</span>
+      <span class="c-value">@env_snk</span>
+    </a>
     <a class="contact" href="https://steamcommunity.com/id/env_snake/" target="_blank" rel="noopener">
       <span class="c-label"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M11.979 0C5.678 0 .511 4.86.022 11.037l6.432 2.658c.545-.371 1.203-.59 1.912-.59.063 0 .125.004.188.006l2.861-4.142V8.91c0-2.495 2.028-4.524 4.524-4.524 2.494 0 4.524 2.031 4.524 4.527s-2.03 4.525-4.524 4.525h-.105l-4.076 2.911c0 .052.004.105.004.159 0 1.875-1.515 3.396-3.39 3.396-1.635 0-3.016-1.173-3.331-2.727L.436 15.27C1.862 20.307 6.486 24 11.979 24c6.627 0 11.999-5.373 11.999-12S18.605 0 11.979 0zM7.54 18.21l-1.473-.61c.262.543.714.999 1.314 1.25 1.297.539 2.793-.076 3.332-1.375.263-.63.264-1.319.005-1.949s-.75-1.121-1.377-1.383c-.624-.26-1.29-.249-1.878-.03l1.523.63c.956.4 1.409 1.5 1.009 2.455-.397.957-1.497 1.41-2.454 1.012H7.54zm11.415-9.303c0-1.662-1.353-3.015-3.015-3.015-1.665 0-3.015 1.353-3.015 3.015 0 1.665 1.35 3.015 3.015 3.015 1.663 0 3.015-1.35 3.015-3.015zm-5.273-.005c0-1.252 1.013-2.266 2.265-2.266 1.249 0 2.266 1.014 2.266 2.266 0 1.251-1.017 2.265-2.266 2.265-1.253 0-2.265-1.014-2.265-2.265z"/></svg>Steam</span>
       <span class="c-value">env_snake</span>
@@ -323,7 +342,7 @@
 
 <footer>
   <span>Snake · Level Design &amp; Environment Art</span>
-  <a href="https://t.me/env_snk" target="_blank" rel="noopener">Telegram: @env_snk</a>
+  <span class="foot-links"><button class="foot-copy" type="button" data-copy="env_snake" title="Copy Discord username">Discord: env_snake</button><span>·</span><a href="https://t.me/env_snk" target="_blank" rel="noopener">Telegram: @env_snk</a></span>
 </footer>
 
 <div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Image viewer">
@@ -478,7 +497,7 @@ const SECTIONS = [
         {
           slug: "port-alyx", title: "Half-Life: Alyx — asset porting", count: 10,
           desc: "A manual port of Half-Life: Alyx models and environments into the Source Engine.",
-          tags: ["Models", "Materials", "Hammer"],
+          tags: ["Models", "Materials"],
           videos: [{ src: "alyx-lods", label: "LOD and animation porting" }, { src: "alyx-antlions", label: "Porting animated antlions" }]
         },
         {
@@ -642,12 +661,21 @@ const posterIO = new IntersectionObserver(entries => entries.forEach(e => {
 }), { rootMargin: "600px 0px" });
 document.querySelectorAll("video[data-poster]").forEach(v => posterIO.observe(v));
 
-/* Discord: copy nickname */
-const dc = document.getElementById("discord");
-dc.addEventListener("click", () => {
-  const hint = dc.querySelector(".c-hint");
-  const done = () => { hint.textContent = "Copied ✓"; setTimeout(() => { hint.textContent = "Click to copy"; }, 1600); };
-  if (navigator.clipboard) navigator.clipboard.writeText(dc.dataset.copy).then(done, () => {});
+/* Discord: copy nickname (hero, contacts, footer) */
+document.querySelectorAll("[data-copy]").forEach(el => {
+  el.addEventListener("click", () => {
+    const hint = el.querySelector(".c-hint");
+    const chip = el.querySelector("em");
+    const prevHint = hint ? hint.textContent : null;
+    const prevChip = chip ? chip.textContent : null;
+    const footPrev = el.classList.contains("foot-copy") ? el.textContent : null;
+    const done = () => {
+      if (hint) { hint.textContent = "Copied ✓"; setTimeout(() => { hint.textContent = prevHint; }, 1600); }
+      if (chip) { chip.textContent = "Copied ✓"; setTimeout(() => { chip.textContent = prevChip; }, 1600); }
+      if (footPrev) { el.classList.add("copied"); el.textContent = "Discord: copied ✓"; setTimeout(() => { el.classList.remove("copied"); el.textContent = footPrev; }, 1600); }
+    };
+    if (navigator.clipboard) navigator.clipboard.writeText(el.dataset.copy).then(done, () => {});
+  });
 });
 
 /* Only one video plays at a time */
