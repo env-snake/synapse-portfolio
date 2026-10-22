@@ -18,13 +18,13 @@
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Unbounded:wght@500;700&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #0d0e12;
-    --bg-2: #15171d;
-    --line: #262933;
-    --text: #e9e6e1;
-    --muted: #9a9aa3;
-    --accent: #ff9f43;
-    --accent-2: #ff6b4a;
+    --bg: #090a0c;
+    --bg-2: #121417;
+    --line: #23272c;
+    --text: #edf1f5;
+    --muted: #98a1aa;
+    --accent: #aac8e6;
+    --accent-2: #6f9dc6;
     --radius: 10px;
     --gutter: clamp(16px, 4vw, 48px);
   }
@@ -43,10 +43,10 @@
     position: fixed; inset: 0 0 auto 0; z-index: 20;
     display: flex; align-items: center; justify-content: space-between; gap: 16px;
     padding: 14px var(--gutter);
-    background: linear-gradient(to bottom, rgba(13,14,18,.85), rgba(13,14,18,0));
+    background: linear-gradient(to bottom, rgba(9,10,12,.85), rgba(9,10,12,0));
     transition: background .25s;
   }
-  .topbar.solid { background: rgba(13,14,18,.92); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
+  .topbar.solid { background: rgba(9,10,12,.92); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
   .brand { display: flex; align-items: center; gap: 10px; font-family: "Unbounded", sans-serif; font-weight: 700; font-size: 15px; letter-spacing: .02em; text-decoration: none; }
   .brand img { width: 30px; height: 30px; border-radius: 50%; }
   .brand b { color: var(--accent); font-weight: inherit; }
@@ -55,11 +55,11 @@
     display: inline-flex; align-items: center; gap: 8px; text-decoration: none;
     color: var(--text); font-size: 14px; font-weight: 700;
     padding: 8px 16px 8px 13px; border-radius: 999px;
-    background: rgba(255,159,67,.14); border: 1px solid rgba(255,159,67,.5);
+    background: rgba(170,200,230,.14); border: 1px solid rgba(170,200,230,.5);
     transition: background .2s;
   }
   .nav a.nav-cta .ico { width: 17px; height: 17px; color: var(--accent); }
-  .nav a.nav-cta:hover { background: rgba(255,159,67,.26); }
+  .nav a.nav-cta:hover { background: rgba(170,200,230,.26); }
 
   /* ---------- Hero ---------- */
   .hero {
@@ -70,7 +70,7 @@
   .hero::before {
     content: ""; position: absolute; inset: 0;
     background:
-      linear-gradient(to top, var(--bg) 0%, rgba(13,14,18,.75) 35%, rgba(13,14,18,.15) 70%, rgba(13,14,18,.45) 100%);
+      linear-gradient(to top, var(--bg) 0%, rgba(9,10,12,.75) 35%, rgba(9,10,12,.15) 70%, rgba(9,10,12,.45) 100%);
   }
   .hero-inner { position: relative; max-width: 860px; }
   .eyebrow { font-size: 13px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: var(--accent); margin: 0 0 14px; }
@@ -92,7 +92,7 @@
   .project h3 { font-family: "Unbounded", sans-serif; font-weight: 500; font-size: clamp(22px, 2.8vw, 34px); margin: 0; }
   .project .desc { color: var(--muted); margin: 0 0 22px; max-width: 760px; }
   .tags { display: flex; flex-wrap: wrap; gap: 6px; }
-  .tag { font-size: 12px; font-weight: 600; color: var(--accent); border: 1px solid rgba(255,159,67,.35); padding: 3px 10px; border-radius: 999px; }
+  .tag { font-size: 12px; font-weight: 600; color: var(--accent); border: 1px solid rgba(170,200,230,.35); padding: 3px 10px; border-radius: 999px; }
 
   .videos { display: grid; gap: 14px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 520px), 1fr)); margin-bottom: 14px; }
   .video { background: var(--bg-2); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
@@ -164,11 +164,11 @@
   .desc a.ext { display: inline-flex; align-items: center; gap: 5px; vertical-align: -2px; }
   .desc a.ext img { width: 16px; height: 16px; }
   .desc code {
-    font-family: Consolas, "JetBrains Mono", monospace; font-size: .92em; color: #ffd2a6;
+    font-family: Consolas, "JetBrains Mono", monospace; font-size: .92em; color: #c2dcf3;
     background: #1d2029; border: 1px solid var(--line); padding: 1px 6px; border-radius: 5px;
   }
   .wip {
-    font-size: .8em; font-weight: 700; letter-spacing: .06em; color: #16110a; background: var(--accent);
+    font-size: .8em; font-weight: 700; letter-spacing: .06em; color: #0b0f14; background: var(--accent);
     padding: 1px 8px; border-radius: 999px; white-space: nowrap;
   }
 
@@ -179,7 +179,7 @@
     .rail {
       display: block; position: fixed; z-index: 15; right: 22px; top: 50%; transform: translateY(-50%);
       padding: 14px 16px 14px 18px; border-radius: 14px;
-      background: rgba(13,14,18,.55); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,.06);
+      background: rgba(9,10,12,.55); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,.06);
     }
     .rail ol { list-style: none; margin: 0; padding: 0; }
     .rail-track { position: absolute; right: 16px; top: 16px; bottom: 16px; width: 2px; background: var(--line); border-radius: 2px; }
@@ -225,9 +225,9 @@
   }
   .contact:hover { border-color: var(--accent); transform: translateY(-2px); }
   .contact:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
-  .contact.preferred { border-color: var(--accent); background: linear-gradient(135deg, rgba(255,159,67,.14), var(--bg-2) 60%); }
+  .contact.preferred { border-color: var(--accent); background: linear-gradient(135deg, rgba(170,200,230,.14), var(--bg-2) 60%); }
   .c-label { font-size: 12px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); display: flex; align-items: center; gap: 8px; }
-  .c-label em { font-style: normal; letter-spacing: .06em; color: #16110a; background: var(--accent); padding: 2px 8px; border-radius: 999px; font-size: 11px; }
+  .c-label em { font-style: normal; letter-spacing: .06em; color: #0b0f14; background: var(--accent); padding: 2px 8px; border-radius: 999px; font-size: 11px; }
   .c-value { font-family: "Unbounded", sans-serif; font-size: 17px; font-weight: 500; color: var(--text); overflow-wrap: anywhere; }
   .c-hint { font-size: 12px; color: var(--muted); }
   .old-works { margin-top: 28px; display: grid; gap: 12px; }
@@ -348,6 +348,40 @@ const SECTIONS = [
     about: "",
     groups: [
       {
+        title: "Sci-Fi",
+        projects: [
+          {
+            slug: "combine", title: "Combine Sector", year: "2026", count: 21,
+            desc: "A Combine sector for an HL2-themed RP server, built a couple of months ago. I personally <a href='#port-alyx'>ported</a> most of the assets from <a href='https://store.steampowered.com/app/546560/HalfLife_Alyx/' target='_blank' rel='noopener'>Half-Life: Alyx</a> with LOD system support. Lighting uses the <code>static_projected_light</code> shader.",
+            tags: ["Interior", "Lighting", "Sci-Fi"],
+            videos: [
+              { src: "combine-cinematic", label: "Cinematic" },
+              { src: "combine-corridor", label: "Cross corridor" },
+              { src: "combine-hall", label: "Main corridor" }
+            ]
+          },
+          {
+            slug: "underwater", title: "Underwater Facility", year: "2024–2026", count: 15,
+            desc: "An underwater complex I built for an SCP-RP server. The map has custom assets, but most of the work was done with brushes and then converted into models.",
+            tags: ["Interior", "Lighting", "Sci-Fi"],
+            videos: [{ src: "underwater", label: "Flythrough" }]
+          },
+          {
+            slug: "horror", title: "Horror Underwater Facility", year: "2026", count: 14,
+            parts: [{ label: "Sea floor", from: 1, to: 10 }, { label: "Technical sections", from: 11, to: 14 }],
+            desc: "A new version of the sea floor and the overall look for a new underwater station map. The map uses clusters of custom shaders I made specifically for these locations. The scene is assembled from <a href='https://store.steampowered.com/app/282140/SOMA/' target='_blank' rel='noopener'>SOMA</a> assets, ported by an <a href='#port-soma'>automated pipeline</a> I wrote myself.",
+            extra: {
+              title: "Custom underwater shaders",
+              items: ["Volumetric Fog", "Depth Reconstruction", "Height / Depth Darkening", "Volumetric Lighting (unshadowed)",
+                      "Caustics", "Fog Noise", "Fog-to-Sky Blending", "DDOF", "HDR Bloom", "Film Grain", "Chromatic Aberration",
+                      "Lens Flares", "Radial Blur", "Video Distortion", "Image Trail", "Marine Snow", "Procedural Sky"]
+            },
+            tags: ["Exterior", "Interior", "Horror"],
+            videos: [{ src: "horror-underwater", label: "Flythrough" }]
+          }
+        ]
+      },
+      {
         title: "Pipeline",
         projects: [
           {
@@ -405,40 +439,6 @@ const SECTIONS = [
             videos: []
           }
         ]
-      },
-      {
-        title: "Sci-Fi",
-        projects: [
-          {
-            slug: "combine", title: "Combine Sector", year: "2026", count: 21,
-            desc: "A Combine sector for an HL2-themed RP server, built a couple of months ago. I personally <a href='#port-alyx'>ported</a> most of the assets from <a href='https://store.steampowered.com/app/546560/HalfLife_Alyx/' target='_blank' rel='noopener'>Half-Life: Alyx</a> with LOD system support. Lighting uses the <code>static_projected_light</code> shader.",
-            tags: ["Interior", "Lighting", "Sci-Fi"],
-            videos: [
-              { src: "combine-cinematic", label: "Cinematic" },
-              { src: "combine-corridor", label: "Cross corridor" },
-              { src: "combine-hall", label: "Main corridor" }
-            ]
-          },
-          {
-            slug: "underwater", title: "Underwater Facility", year: "2024–2026", count: 15,
-            desc: "An underwater complex I built for an SCP-RP server. The map has custom assets, but most of the work was done with brushes and then converted into models.",
-            tags: ["Interior", "Lighting", "Sci-Fi"],
-            videos: [{ src: "underwater", label: "Flythrough" }]
-          },
-          {
-            slug: "horror", title: "Horror Underwater Facility", year: "2026", count: 14,
-            parts: [{ label: "Sea floor", from: 1, to: 10 }, { label: "Technical sections", from: 11, to: 14 }],
-            desc: "A new version of the sea floor and the overall look for a new underwater station map. The map uses clusters of custom shaders I made specifically for these locations. The scene is assembled from <a href='https://store.steampowered.com/app/282140/SOMA/' target='_blank' rel='noopener'>SOMA</a> assets, ported by an <a href='#port-soma'>automated pipeline</a> I wrote myself.",
-            extra: {
-              title: "Custom underwater shaders",
-              items: ["Volumetric Fog", "Depth Reconstruction", "Height / Depth Darkening", "Volumetric Lighting (unshadowed)",
-                      "Caustics", "Fog Noise", "Fog-to-Sky Blending", "DDOF", "HDR Bloom", "Film Grain", "Chromatic Aberration",
-                      "Lens Flares", "Radial Blur", "Video Distortion", "Image Trail", "Marine Snow", "Procedural Sky"]
-            },
-            tags: ["Exterior", "Interior", "Horror"],
-            videos: [{ src: "horror-underwater", label: "Flythrough" }]
-          }
-        ]
       }
     ]
   },
@@ -476,6 +476,12 @@ const SECTIONS = [
     groups: [{
       projects: [
         {
+          slug: "port-alyx", title: "Half-Life: Alyx — asset porting", count: 10,
+          desc: "A manual port of Half-Life: Alyx models and environments into the Source Engine.",
+          tags: ["Models", "Materials", "Hammer"],
+          videos: [{ src: "alyx-lods", label: "LOD and animation porting" }, { src: "alyx-antlions", label: "Porting animated antlions" }]
+        },
+        {
           slug: "port-soma", title: "SOMA — automated asset porting", count: 0,
           desc: "SOMA environments ported into the Source Engine by an automated pipeline.",
           tags: ["Automation", "Pipeline"],
@@ -486,12 +492,6 @@ const SECTIONS = [
           desc: "A manual port of stylized trees, vegetation and props through Blender.",
           tags: ["Blender", "Foliage"],
           videos: [{ src: "port-manga", label: "Trees from UE5, source files" }]
-        },
-        {
-          slug: "port-alyx", title: "Half-Life: Alyx — asset porting", count: 10,
-          desc: "A manual port of Half-Life: Alyx models and environments into the Source Engine.",
-          tags: ["Models", "Materials", "Hammer"],
-          videos: [{ src: "alyx-lods", label: "LOD and animation porting" }, { src: "alyx-antlions", label: "Porting animated antlions" }]
         }
       ]
     }]
